@@ -20,6 +20,6 @@ model.fit(X, y)
 # Make prediction
 hours = float(input("How many hours did you study? "))
 
-prediction = model.predict([[hours]])
+prediction = model.predict(pd.DataFrame({"hours": [hours]}))
 
 print(f"Predicted score: {prediction[0]:.2f}")
